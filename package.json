@@ -1,0 +1,14 @@
+{
+  "name": "chuck-norris-app",
+  "version": "1.0.0",
+  "description": "Chuck Norris quotation nodejs server",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "chuck-norris-app": "./main.js",
+    "chuck-norris-cli": "./cli.js"
+  },
+  "dependencies": {
+    "chucknorris-io": "^1.0.4"
+  }
+}

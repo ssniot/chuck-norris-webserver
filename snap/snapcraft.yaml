@@ -1,0 +1,29 @@
+name: chuck-norris-webserver
+version: '1.0.0'
+summary: Chuck Norris quotation nodejs server and cli
+description: |
+  This example shows how to build a nodejs web server and cli. This enables us
+  to demonstrate how service works, basic confinement rules to access and listen
+  on the network, as well as the nodejs snapcraft plugin.
+  The command line demonstrate various file-based access permissions.
+icon: chuck-norris.png
+grade: stable
+confinement: strict
+
+apps:
+  node-service:
+    command: chuck-norris-app
+    daemon: simple
+    restart-condition: always
+  cli:
+    command: chuck-norris-cli
+
+parts:
+  webserver:
+    source: .
+    plugin: nodejs
+  # workaround until we have snapcraft hooks support
+  hook:
+    source: .
+    plugin: dump
+    prime: [meta]
