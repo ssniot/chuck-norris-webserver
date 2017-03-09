@@ -26,4 +26,5 @@ parts:
   hook:
     source: .
     plugin: dump
+    stage: [meta]
     prime: [meta]
