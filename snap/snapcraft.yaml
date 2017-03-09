@@ -1,22 +1,23 @@
-name: chuck-norris-webserver
+name: chuck-norris-webserver-classic
 version: '1.0.0'
-summary: Chuck Norris quotation nodejs server and cli
+summary: Chuck Norris quotation nodejs server and cli. Classic mode
 description: |
   This example shows how to build a nodejs web server and cli. This enables us
   to demonstrate how service works, basic confinement rules to access and listen
   on the network, as well as the nodejs snapcraft plugin.
   The command line demonstrate various file-based access permissions.
+  This is the classic mode of the snap
 icon: chuck-norris.png
 grade: stable
-confinement: strict
+confinement: classic
 
 apps:
   node-service:
-    command: chuck-norris-app
+    command: bin/chuck-norris-app
     daemon: simple
     restart-condition: always
   cli:
-    command: chuck-norris-cli
+    command: bin/chuck-norris-cli
 
 parts:
   webserver:
