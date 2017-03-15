@@ -15,8 +15,10 @@ apps:
     command: chuck-norris-app
     daemon: simple
     restart-condition: always
+    plugs: [network-bind]
   cli:
     command: chuck-norris-cli
+    plugs: [camera, network]
 
 parts:
   webserver:
