@@ -1,4 +1,4 @@
-name: chuck-norris-webserver
+name: travis-norris-webserver
 version: '1.0.0'
 summary: Chuck Norris quotation nodejs server and cli
 description: |
